@@ -1,0 +1,23 @@
+{
+  "name": "Kautilya Neo",
+  "short_name": "Kautilya",
+  "description": "Advanced Gemini AI Interface",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#dde1e7",
+  "theme_color": "#dde1e7",
+  "icons": [
+    {
+      "src": "192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
