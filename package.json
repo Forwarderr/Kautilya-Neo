@@ -1,8 +1,8 @@
 {
-  "name": "pwa-kautilya",
+  "name": "pwa-gemini",
   "version": "1.0.0",
   "scripts": {
-    "start": "npx serve . -p $PORT -s"
+    "start": "npx serve . -p $PORT -s --single"
   },
   "dependencies": {
     "serve": "^14.2.1"
