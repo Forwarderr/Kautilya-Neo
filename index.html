@@ -1232,8 +1232,8 @@ input[type=range]::-webkit-slider-thumb:hover {
 
     <div class="input-group" style="margin-top:12px;">
       <label>Instruction Template</label>
-      <textarea id="newPromptTemplate" class="neu-input" rows="5" placeholder="Write your system instructions here. Use {0} as the topic placeholder.&#10;&#10;Example: Analyze {0} from a contrarian perspective..." maxlength="2000"></textarea>
-      <div class="char-counter" id="templateCharCounter">0 / 2000</div>
+      <textarea id="newPromptTemplate" class="neu-input" rows="5" placeholder="Write your system instructions here. Use {0} as the topic placeholder.&#10;&#10;Example: Analyze {0} from a contrarian perspective..." maxlength="3000"></textarea>
+      <div class="char-counter" id="templateCharCounter">0 / 3000</div>
     </div>
 
     <p style="font-size:0.65rem;color:var(--text-secondary);margin-top:4px;padding-left:2px;">
@@ -1559,7 +1559,7 @@ document.getElementById('newPromptBtn').addEventListener('click', () => {
   document.getElementById('deletePromptBtn').style.display = 'none';
   document.getElementById('newPromptName').value = '';
   document.getElementById('newPromptTemplate').value = '';
-  document.getElementById('templateCharCounter').textContent = '0 / 2000';
+  document.getElementById('templateCharCounter').textContent = '0 / 3000';
   openModal('promptOverlay');
   setTimeout(() => document.getElementById('newPromptName').focus(), 100);
 });
@@ -1575,7 +1575,7 @@ document.getElementById('editPromptBtn').addEventListener('click', () => {
   document.getElementById('promptModalTitle').textContent = 'Edit Prompt';
   document.getElementById('newPromptName').value = customPrompts[idx].name;
   document.getElementById('newPromptTemplate').value = customPrompts[idx].template;
-  document.getElementById('templateCharCounter').textContent = `${customPrompts[idx].template.length} / 2000`;
+  document.getElementById('templateCharCounter').textContent = `${customPrompts[idx].template.length} / 3000`;
   document.getElementById('savePromptBtn').textContent = 'Update Prompt';
   document.getElementById('deletePromptBtn').style.display = '';
   openModal('promptOverlay');
@@ -1586,7 +1586,7 @@ document.getElementById('closePromptBtn').addEventListener('click', () => closeM
 document.getElementById('newPromptTemplate').addEventListener('input', function() {
   const len = this.value.length;
   const counter = document.getElementById('templateCharCounter');
-  counter.textContent = `${len} / 2000`;
+  counter.textContent = `${len} / 3000`;
   counter.className = 'char-counter' + (len > 1800 ? (len > 1950 ? ' limit' : ' warn') : '');
 });
 
